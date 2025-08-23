@@ -1,5 +1,5 @@
 import express from "express";
-import {summarizeText} from "../controllers/summarizeController.js";
+import {summarizeText} from "../Controllers/summarizeController.js";
 
 const router = express.Router();
 
