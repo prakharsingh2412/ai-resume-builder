@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+import connectDB from "./db/db.js";
 
 import resumeRoutes from "./routes/resumeRoutes.js";
 import chatbotRoutes from "./routes/chatbotRoutes.js";
@@ -9,6 +10,9 @@ import summaryRoutes from "./routes/summaryRoutes.js";
 import interviewRoutes from "./routes/interviewRoutes.js";
 
 dotenv.config();
+
+// Connect to MongoDB
+connectDB();
 
 const app = express();
 app.use(cors());
