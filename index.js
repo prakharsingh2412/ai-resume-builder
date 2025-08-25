@@ -8,7 +8,7 @@ import chatbotRoutes from "./routes/chatbotRoutes.js";
 import coverLetterRoutes from "./routes/coverLetterRoutes.js";
 import summaryRoutes from "./routes/summaryRoutes.js";
 import interviewRoutes from "./routes/interviewRoutes.js";
-import authRoutes from "./routes/authRoutes.js"; // ✅ NEW
+import authRoutes from "./routes/authRoutes.js";
 
 dotenv.config();
 
