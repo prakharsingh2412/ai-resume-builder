@@ -9,6 +9,7 @@ import coverLetterRoutes from "./routes/coverLetterRoutes.js";
 import summaryRoutes from "./routes/summaryRoutes.js";
 import interviewRoutes from "./routes/interviewRoutes.js";
 import authRoutes from "./routes/authRoutes.js";
+import jobRoutes from "./routes/jobRoutes.js";
 
 dotenv.config();
 
@@ -20,6 +21,7 @@ app.use(cors());
 app.use(express.json());
 
 // routes
+app.use("/jobs", jobRoutes);
 app.use("/auth", authRoutes); 
 app.use("/resume", resumeRoutes);
 app.use("/chatbot", chatbotRoutes);
