@@ -26,9 +26,9 @@ export default async function scrapeJob(rawUrl) {
   if (fs.existsSync("cookies.json")) {
     const cookies = JSON.parse(fs.readFileSync("cookies.json", "utf8"));
     await page.setCookie(...cookies);
-    console.log("✅ Cookies loaded into Puppeteer");
+    console.log(" Cookies loaded into Puppeteer");
   } else {
-    console.warn("⚠️ No cookies.json found. Login may fail.");
+    console.warn("No cookies.json found. Login may fail.");
   }
 
   // ✅ Navigate
@@ -53,7 +53,7 @@ export default async function scrapeJob(rawUrl) {
   await browser.close();
 
   if (!job.title) {
-    console.error("⚠️ Failed to scrape job details, check debug.png");
+    console.error("Failed to scrape job details, check debug.png");
     return null;
   }
 
