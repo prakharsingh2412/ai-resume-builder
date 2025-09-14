@@ -1,21 +1,68 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
 
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
 
-:root{--royal-blue:#1666ff}
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
 
-.btn{background:linear-gradient(90deg,var(--royal-blue),#00d4ff);padding:8px 12px;border-radius:12px;font-weight:600}
-.btn-primary{background:linear-gradient(90deg,var(--royal-blue),#00b4ff);padding:8px 12px;border-radius:12px}
-.btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:12px}
-.btn-sm{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:6px 8px;border-radius:8px;font-size:13px}
-.btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.12);padding:9px;border-radius:12px}
-.input{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.04);padding:8px 10px;border-radius:10px;width:100%}
-.chip{background:transparent;border:1px solid rgba(255,255,255,0.05);padding:6px 10px;border-radius:999px}
-.chip-active{background:linear-gradient(90deg,#0ea5e9,#7c3aed);padding:6px 10px;border-radius:999px}
-.glassmorphism{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.04);backdrop-filter: blur(8px)}
-.transition-width{transition: width 400ms ease}
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
 
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
 
-body { background: transparent; }
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}

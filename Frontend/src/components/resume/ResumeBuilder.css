@@ -1,0 +1,72 @@
+/* Container styling */
+.resume-builder {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.resume-builder h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+/* Form styles */
+.resume-builder form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Input and textarea styles */
+.resume-builder input[type="text"],
+.resume-builder input[type="email"],
+.resume-builder input[type="tel"],
+.resume-builder textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+/* Input focus */
+.resume-builder input[type="text"]:focus,
+.resume-builder input[type="email"]:focus,
+.resume-builder input[type="tel"]:focus,
+.resume-builder textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Textarea min height */
+.resume-builder textarea {
+  min-height: 80px;
+}
+
+/* Button */
+.resume-builder button[type="submit"] {
+  padding: 14px 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover */
+.resume-builder button[type="submit"]:hover {
+  background-color: #0056b3;
+}
