@@ -1,13 +1,26 @@
 import React, { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import { Group } from 'three';
 
-const AtsScanner = ({ scanResult }) => {
-  const containerRef = useRef(null);
-  const modelRef = useRef(null);
+// Define interface for scan result props
+interface ScanResult {
+  score: number;
+  feedback?: string;
+}
+
+interface ATSScannerProps {
+  scanResult: ScanResult;
+}
+
+const AtsScanner: React.FC<ATSScannerProps> = ({ scanResult }) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const modelRef = useRef<Group | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    if (!containerRef.current) return;
+
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
